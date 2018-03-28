@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="[%t] %-5level %C{1}.%M(%L) - %msg%n"/>
+    </Console>
+  </Appenders>
+  <Loggers>
+  	<Logger level="info" name="org.springframework">
+  		<AppenderRef ref="Console"/>
+  	</Logger>
+  	<Logger level="info" name="org.dbunit">
+  		<AppenderRef ref="Console"/>
+  	</Logger>
+  	<Logger level="info" name="org.hibernate">
+  		<AppenderRef ref="Console"/>
+  	</Logger>
+    <Root level="debug">
+      <AppenderRef ref="Console"/>
+    </Root>
+  </Loggers>
+</Configuration>
